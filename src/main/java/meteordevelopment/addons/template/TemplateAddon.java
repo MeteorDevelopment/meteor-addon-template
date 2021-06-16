@@ -35,7 +35,6 @@ public class TemplateAddon extends MeteorAddon {
 		// HUD
 		HUD hud = Modules.get().get(HUD.class);
 		hud.elements.add(new HudExample(hud));
-
 	}
 
 	@Override
