@@ -1,8 +1,17 @@
-# Meteor Addon Template
+# Lightswitch [Beta]
 
-A template to allow easy usage of the Meteor Addon API.
+### Modules
++ AutoBedTrap
++ AutoBedCraft
++ SurroundPlus -> [Orion](https://github.com/AntiCope/orion/blob/main/src/main/java/me/ghosttypes/orion/modules/main/SurroundPlus.java)
++ PopCounter -> [Orion](https://github.com/AntiCope/orion/blob/main/src/main/java/me/ghosttypes/orion/modules/chat/PopCounter.java)
++ BurrowPlus
++ Burrow Alert -> [Orion](https://github.com/AntiCope/orion/blob/main/src/main/java/me/ghosttypes/orion/modules/chat/BurrowAlert.java)
++ Custom discord presence
 
-### How to use:  
-- Clone this project
-- Use this template to create new modules/commands
-- Run the mod with Meteor.
+
+### Credits
++ Utils -> [Orion](https://github.com/AntiCope/orion)
++ Mixins -> [Orion](https://github.com/AntiCope/orion/tree/main/src/main/java/me/ghosttypes/orion/mixins)
+
+skidded by me very skid
