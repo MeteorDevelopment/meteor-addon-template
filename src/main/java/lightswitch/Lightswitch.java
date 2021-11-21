@@ -1,6 +1,7 @@
 package lightswitch;
 
 import lightswitch.commands.ExampleCommand;
+import lightswitch.modules.combat.AutoEz;
 import lightswitch.modules.combat.Example;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -25,7 +26,7 @@ public class Lightswitch extends MeteorAddon {
         MeteorClient.EVENT_BUS.registerLambdaFactory("meteordevelopment.addons.template", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
         // Modules
-        Modules.get().add(new Example());
+        Modules.get().add(new AutoEz());
 
         // Commands
         Commands.get().add(new ExampleCommand());
