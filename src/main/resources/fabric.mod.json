@@ -1,31 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "lightswitch",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for the Meteor Addon API.",
+  "name": "Lightswitch",
+  "description": "A skid",
   "authors": [
-    "seasnail8169"
+    "JohanDevv",
+    "Sssnipa"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/JohanDevv/Lightswitch"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/lightswitch/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "meteordevelopment.addons.template.TemplateAddon"
+      "lightswitch.Lightswitch"
     ]
   },
   "mixins": [
-    "template.mixins.json"
+    "lightswitch.mixins.json"
   ],
-  "custom": {
-    "meteor-client:color": "225,25,25"
-  },
   "depends": {
     "java": ">=16",
-    "minecraft": ">=@mc_version@",
-    "meteor-client": "*"
+    "minecraft": ">=1.17.1",
+    "meteor-client": ">0.4.3"
   }
 }
