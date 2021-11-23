@@ -1,7 +1,6 @@
 package lightswitch;
 
 import lightswitch.commands.ExampleCommand;
-import lightswitch.modules.chat.AutoEz;
 import lightswitch.modules.chat.PopCounter;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
