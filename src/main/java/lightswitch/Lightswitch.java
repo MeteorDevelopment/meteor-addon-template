@@ -23,11 +23,9 @@ public class Lightswitch extends MeteorAddon {
 
         // Required when using @EventHandler
         MeteorClient.EVENT_BUS.registerLambdaFactory("lightswitch.Lightswitch", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
-        MeteorClient.EVENT_BUS.registerLambdaFactory("lightswitch.modules.chat.AutoEz", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
         MeteorClient.EVENT_BUS.registerLambdaFactory("lightswitch.modules.chat.PopCounter", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
         // Modules
-        Modules.get().add(new AutoEz());
         Modules.get().add(new PopCounter());
 
         // Commands

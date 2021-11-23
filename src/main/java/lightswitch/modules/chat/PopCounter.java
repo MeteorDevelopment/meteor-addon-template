@@ -46,8 +46,8 @@ public class PopCounter extends Module {
     public final Setting<Boolean> suffix = sgAutoEz.add(new BoolSetting.Builder().name("suffix").description("Add Lightswitch suffix to the end of pop messages.").defaultValue(false).visible(autoEz::get).build());
     public final Setting<Boolean> killStr = sgAutoEz.add(new BoolSetting.Builder().name("killstreak").description("Add your killstreak to the end of autoez messages").defaultValue(false).visible(autoEz::get).build());
     public final Setting<Boolean> pmEz = sgAutoEz.add(new BoolSetting.Builder().name("pm-ez").description("Send the autoez message to the player's dm.").defaultValue(false).visible(autoEz::get).build());
-    private final Setting<List<String>> popMessages = sgMessages.add(new StringListSetting.Builder().name("pop-messages").description("Messages to use when announcing pops.").defaultValue(Collections.emptyList()).build());
-    public final Setting<List<String>> ezMessages = sgMessages.add(new StringListSetting.Builder().name("ez-messages").description("Messages to use for autoez.").defaultValue(Collections.emptyList()).visible(autoEz::get).build());
+    private final Setting<List<String>> popMessages = sgMessages.add(new StringListSetting.Builder().name("pop-messages").description("Messages to use when announcing pops.").defaultValue("Popped by Lightswitch"/*Collections.emptyList()*/).build());
+    public final Setting<List<String>> ezMessages = sgMessages.add(new StringListSetting.Builder().name("ez-messages").description("Messages to use for autoez.").defaultValue("Lightswitch on top!"/*Collections.emptyList()*/).visible(autoEz::get).build());
 
     public final Object2IntMap<UUID> totemPops = new Object2IntOpenHashMap<>();
     private final Object2IntMap<UUID> chatIds = new Object2IntOpenHashMap<>();
