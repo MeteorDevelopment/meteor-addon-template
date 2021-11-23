@@ -43,7 +43,7 @@ public class PopCounter extends Module {
     private final Setting<Boolean> dontAnnounceFriends = sgGeneral.add(new BoolSetting.Builder().name("dont-announce-friends").description("Don't annnounce when your friends pop.").defaultValue(true).build());
     public final Setting<Boolean> doPlaceholders = sgGeneral.add(new BoolSetting.Builder().name("placeholders").description("Enable global placeholders for pop/auto ez messages.").defaultValue(false).build());
     public final Setting<Boolean> autoEz = sgAutoEz.add(new BoolSetting.Builder().name("auto-ez").description("Sends a message when you kill players.").defaultValue(false).build());
-    public final Setting<Boolean> suffix = sgAutoEz.add(new BoolSetting.Builder().name("suffix").description("Add Orion suffix to the end of pop messages.").defaultValue(false).visible(autoEz::get).build());
+    public final Setting<Boolean> suffix = sgAutoEz.add(new BoolSetting.Builder().name("suffix").description("Add Lightswitch suffix to the end of pop messages.").defaultValue(false).visible(autoEz::get).build());
     public final Setting<Boolean> killStr = sgAutoEz.add(new BoolSetting.Builder().name("killstreak").description("Add your killstreak to the end of autoez messages").defaultValue(false).visible(autoEz::get).build());
     public final Setting<Boolean> pmEz = sgAutoEz.add(new BoolSetting.Builder().name("pm-ez").description("Send the autoez message to the player's dm.").defaultValue(false).visible(autoEz::get).build());
     private final Setting<List<String>> popMessages = sgMessages.add(new StringListSetting.Builder().name("pop-messages").description("Messages to use when announcing pops.").defaultValue(Collections.emptyList()).build());
