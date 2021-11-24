@@ -102,7 +102,7 @@ public class PopCounter extends Module {
             String popMessage = getPopMessage((PlayerEntity) entity);
             if (doPlaceholders.get()) popMessage = Placeholders.apply(popMessage);
             String name = entity.getEntityName();
-            if (suffix.get()) { popMessage = popMessage + " | Lightswitch " + Lightswitch.VERSION; }
+            if (suffix.get()) { popMessage = popMessage + " | ʟɪɢʜᴛsᴡɪᴛᴄʜ " + Lightswitch.VERSION; }
             mc.player.sendChatMessage(popMessage);
             if (pmOthers.get()) Wrapper.messagePlayer(name, StringHelper.stripName(name, popMessage));
             announceWait = announceDelay.get() * 20;
