@@ -3,6 +3,7 @@ package lightswitch;
 import lightswitch.commands.ExampleCommand;
 import lightswitch.modules.chat.PopCounter;
 import lightswitch.modules.combat.BedAura;
+import lightswitch.modules.combat.SurroundPlus;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.commands.Commands;
@@ -26,10 +27,12 @@ public class Lightswitch extends MeteorAddon {
         MeteorClient.EVENT_BUS.registerLambdaFactory("lightswitch.Lightswitch", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
         MeteorClient.EVENT_BUS.registerLambdaFactory("lightswitch.modules.chat.PopCounter", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
         MeteorClient.EVENT_BUS.registerLambdaFactory("lightswitch.modules.combat.BedAura", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
+        MeteorClient.EVENT_BUS.registerLambdaFactory("lightswitch.modules.combat.SurroundPlus", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
         // Modules
         Modules.get().add(new PopCounter());
         Modules.get().add(new BedAura());
+        Modules.get().add(new SurroundPlus());
 
         // Commands
         Commands.get().add(new ExampleCommand());
