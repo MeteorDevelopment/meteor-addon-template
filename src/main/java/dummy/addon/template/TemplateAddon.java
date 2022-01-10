@@ -6,10 +6,11 @@ import dummy.addon.template.modules.Example;
 import dummy.addon.template.modules.hud.HudExample;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
+import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.commands.Commands;
+import meteordevelopment.meteorclient.systems.hud.HUD;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
-import meteordevelopment.meteorclient.systems.modules.render.hud.HUD;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,7 +35,7 @@ public class TemplateAddon extends MeteorAddon {
 		Commands.get().add(new ExampleCommand());
 
 		// HUD
-		HUD hud = Modules.get().get(HUD.class);
+        HUD hud = Systems.get(HUD.class);
 		hud.elements.add(new HudExample(hud));
 	}
 
