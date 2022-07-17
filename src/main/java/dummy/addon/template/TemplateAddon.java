@@ -1,5 +1,6 @@
 package dummy.addon.template;
 
+import com.mojang.logging.LogUtils;
 import dummy.addon.template.commands.ExampleCommand;
 import dummy.addon.template.modules.AnotherExample;
 import dummy.addon.template.modules.Example;
@@ -12,12 +13,11 @@ import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.lang.invoke.MethodHandles;
 
 public class TemplateAddon extends MeteorAddon {
-	public static final Logger LOG = LoggerFactory.getLogger(TemplateAddon.class);
+	public static final Logger LOG = LogUtils.getLogger();
 	public static final Category CATEGORY = new Category("Example");
     public static final HudGroup HUD_GROUP = new HudGroup("Template");
 
