@@ -26,7 +26,7 @@ public class TemplateAddon extends MeteorAddon {
 		LOG.info("Initializing Meteor Addon Template");
 
 		// Required when using @EventHandler
-		MeteorClient.EVENT_BUS.registerLambdaFactory("meteordevelopment.addons.template", (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
+		MeteorClient.EVENT_BUS.registerLambdaFactory(this.getClass().getPackageName(), (lookupInMethod, klass) -> (MethodHandles.Lookup) lookupInMethod.invoke(null, klass, MethodHandles.lookup()));
 
 		// Modules
 		Modules.get().add(new Example());
