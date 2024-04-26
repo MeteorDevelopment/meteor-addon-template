@@ -3,7 +3,7 @@
   "id": "addon-template",
   "version": "${version}",
   "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "description": "An addon template for Meteor Client addons.",
   "authors": [
     "seasnail"
   ],
@@ -14,7 +14,7 @@
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "com.example.addon.AddonTemplate"
     ]
   },
   "mixins": [
@@ -24,7 +24,7 @@
     "meteor-client:color": "225,25,25"
   },
   "depends": {
-    "java": ">=17",
+    "java": ">=21",
     "minecraft": ">=${mc_version}",
     "meteor-client": "*"
   }
