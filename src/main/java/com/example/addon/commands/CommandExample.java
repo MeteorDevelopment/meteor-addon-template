@@ -4,8 +4,6 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import meteordevelopment.meteorclient.commands.Command;
 import net.minecraft.command.CommandSource;
-import net.minecraft.command.argument.EntityArgumentType;
-import net.minecraft.entity.player.PlayerEntity;
 
 import static com.mojang.brigadier.Command.SINGLE_SUCCESS;
 
@@ -30,13 +28,6 @@ public class CommandExample extends Command {
         builder.then(literal("name").then(argument("nameArgument", StringArgumentType.word()).executes(context -> {
             String argument = StringArgumentType.getString(context, "nameArgument");
             info("hi, " + argument);
-            return SINGLE_SUCCESS;
-        })));
-
-        builder.then(literal("player").then(argument("playerArgument", EntityArgumentType.player()).executes(context -> {
-            PlayerEntity player = context.getArgument("playerArgument", PlayerEntity.class);
-            String playerName = player.getGameProfile().getName();
-            info("hi, " + playerName);
             return SINGLE_SUCCESS;
         })));
     }
