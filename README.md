@@ -79,3 +79,7 @@ Here is a brief explanation of the ones you might need to modify:
   You can edit this file to change the license of your addon.
 - `README.md`: Contains the documentation of the addon.  
   You can edit this file to reflect the documentation of your addon, and showcase its features.
+
+## License
+
+This template is available under the CC0 license. Feel free to use it for your own projects.
