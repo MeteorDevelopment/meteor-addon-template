@@ -4,18 +4,28 @@ on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+            persist-credentials: false
+
       - name: Wrapper Validation
-        uses: gradle/actions/wrapper-validation@v3
+        uses: gradle/actions/wrapper-validation@v4
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
+          distribution: 'temurin'
           java-version: 21
-          distribution: adopt
+
       - name: Build with Gradle
         run: ./gradlew build
+
       - name: Release
         uses: actions/upload-artifact@v4
         with:
