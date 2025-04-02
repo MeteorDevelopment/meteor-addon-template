@@ -36,6 +36,10 @@ tasks {
             "mc_version" to project.property("minecraft_version"),
         )
 
+        inputs.properties(propertyMap)
+
+        filteringCharset = "UTF-8"
+
         filesMatching("fabric.mod.json") {
             expand(propertyMap)
         }
