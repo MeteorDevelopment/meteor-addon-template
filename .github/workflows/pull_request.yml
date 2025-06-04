@@ -11,9 +11,6 @@ jobs:
         with:
             persist-credentials: false
 
-      - name: Wrapper Validation
-        uses: gradle/actions/wrapper-validation@v4
-
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
