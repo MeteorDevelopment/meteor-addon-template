@@ -4,10 +4,52 @@ A template to allow easy usage of the Meteor Addon API.
 
 ### How to use
 
-- Clone this project
-- Use this template to create new modules/commands
-- Build the executable using the gradle `build` task.
-- Run the mod with Meteor.
+#### Use GitHub Template (Recommended)
+
+- Click the green `Use this template` button in the top right corner of this page.  
+  This will create a new repository with this template and a clean history.
+
+#### Clone Manually
+
+- Alternatively, clone this repository using these commands for a clean history:
+  ```bash
+  git clone --depth 1 https://github.com/MeteorDevelopment/meteor-addon-template your-addon-name
+  cd your-addon-name
+  rm -rf .git
+  git init
+  git add .
+  git commit -m "Initial commit from template"
+  ```
+
+#### Development
+
+- Use this template to add custom modules, commands, HUDs, and other features to Meteor Client.
+- To test, run the `Minecraft Client` configuration in your IDE.
+  This will start a Minecraft client with the Meteor Client mod and your addon loaded.
+- To build, run the gradle `build` task. This will create a JAR file in the `build/libs` folder.
+    - Move the JAR file to the `mods` folder of your Minecraft installation, alongside the Meteor Client mod and run the
+      game.
+
+### Updating to newer Minecraft versions
+
+To update this template to a newer Minecraft version, follow these steps:
+
+1. Ensure a Meteor Client snapshot is available for the new Minecraft version.
+2. Update `gradle.properties`:
+    - Set `minecraft_version`, `yarn_mappings` and `loader_version` to the new version.
+    - Update any additional dependencies accordingly.
+3. Update Loom:
+    - Change the `loom_version` in `build.gradle.kts` to the latest version compatible with the new Minecraft version.
+4. Update the Gradle wrapper:
+    - You can find the latest Gradle version [here](https://gradle.org/releases/).
+    - Run the `./gradlew wrapper --gradle-version <version>; ./gradlew wrapper` command to update the wrapper script.
+5. Update your source code:
+    - Adjust for Minecraft or Yarn mapping changes: method names, imports, mixins, etc.
+    - Check for Meteor Client API changes that may affect your addon by comparing against the
+      [master branch](https://github.com/MeteorDevelopment/meteor-client/tree/master).
+6. Build and test:
+    - Run the gradle `build` task.
+    - Confirm the build succeeds and your addon works with the new Minecraft version.
 
 ### Project structure
 
@@ -42,13 +84,13 @@ A template to allow easy usage of the Meteor Addon API.
 │           ╰── fabric.mod.json
 │── .editorconfig
 │── .gitignore
-│── build.gradle
+│── build.gradle.kts
 │── gradle.properties
 │── gradlew
 │── gradlew.bat
 │── LICENSE
 │── README.md
-╰── settings.gradle
+╰── settings.gradle.kts
 ```
 
 This is the default project structure. Each folder/file has a specific purpose.  
