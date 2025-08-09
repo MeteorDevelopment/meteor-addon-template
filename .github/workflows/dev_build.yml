@@ -9,7 +9,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-            persist-credentials: false
+          persist-credentials: false
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
@@ -24,11 +24,11 @@ jobs:
         run: ./gradlew build
 
       - name: Release
-        uses: marvinpinto/action-automatic-releases@latest
+        uses: softprops/action-gh-release@v2
         with:
-          repo_token: '${{ secrets.GITHUB_TOKEN }}'
-          automatic_release_tag: snapshot
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: snapshot
+          name: Dev Build
           prerelease: true
-          title: Dev Build
           files: |
             ./build/libs/*.jar
