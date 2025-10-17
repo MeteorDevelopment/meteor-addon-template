@@ -115,7 +115,7 @@ Here is a brief explanation of the ones you might need to modify:
 - `build.gradle.kts`: Contains the Gradle build script.  
   You can manage the dependencies of the addon here.  
   Remember to keep the `fabric-loom` version up-to-date.
-- `gradle.properties.kts`: Contains the properties of the Gradle build.  
+- `gradle.properties`: Contains the properties of the Gradle build.  
   These will be used by the build script.
 - `LICENSE`: Contains the license of the addon.  
   You can edit this file to change the license of your addon.
