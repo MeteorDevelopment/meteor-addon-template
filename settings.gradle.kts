@@ -9,4 +9,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "addon-template"
+rootProject.name = "banana-addon"

@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "banana-addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "Banana Addon",
+  "description": "Banana-Addon",
   "authors": [
-    "seasnail"
+    "StubbledBannana"
   ],
   "contact": {
-    "sources": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "sources": "https://github.com/StubbledBannana/Banana-Meteor-Addon"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/banana/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.AddonTemplate"
+      "com.bananaddons.BananaAddon"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "banana-addon.mixins.json"
   ],
   "custom": {
-    "meteor-client:color": "225,25,25",
+    "meteor-client:color": "255,255,0",
     "modmenu": {
       "parent": {
         "id": "meteor-client"
