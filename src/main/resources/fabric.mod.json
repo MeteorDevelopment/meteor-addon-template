@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "kitbot",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "KitBot",
+  "description": "Kitbot made by hamburgermain_ on Discord :)",
   "authors": [
-    "seasnail"
+    "hamburgermain_"
   ],
   "contact": {
     "sources": "https://github.com/MeteorDevelopment/meteor-addon-template"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/kitbot/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
